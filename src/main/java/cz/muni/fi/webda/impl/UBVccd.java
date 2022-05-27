@@ -7,9 +7,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * UBV ccd photometry
+ */
 @Entity
 @Data
-public class UBVCCD {
+public class UBVccd {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -21,9 +24,9 @@ public class UBVCCD {
     private Double bvMag;
     private Double ubMag;
 
-    public UBVCCD() {}
+    public UBVccd() {}
 
-    public UBVCCD(int clusterId, int starId, Integer refId, Double vMag, Double bvMag, Double ubMag) {
+    public UBVccd(int clusterId, int starId, Integer refId, Double vMag, Double bvMag, Double ubMag) {
         this.clusterId = clusterId;
         this.starId = starId;
         this.refId = refId;
